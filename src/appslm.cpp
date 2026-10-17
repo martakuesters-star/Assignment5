@@ -16,9 +16,9 @@ appslm::appslm(int argc, char* argv[]) {
     if (argc == 4) { 
         alpha = 0.0; 
         
-        kgram = atoi(argv[1]);
+        kgram = stoi(argv[1]);
         filename = argv[2];
-        outputsize = atoi(argv[3]);
+        outputsize = stoi(argv[3]);
     }
 
     // user provides 5 arguments ('-a' argument is provided):
@@ -27,10 +27,10 @@ appslm::appslm(int argc, char* argv[]) {
             throw invalid_argument("invalid argument '" + string(argv[1]) + "'");
         }
 
-        alpha = atof(argv[2]);
-        kgram = atoi(argv[3]);
+        alpha = stof(argv[2]);
+        kgram = stoi(argv[3]);
         filename = argv[4];
-        outputsize = atoi(argv[5]);
+        outputsize = stoi(argv[5]);
     }
 
     // if the user doesn't provide enough arguments:
@@ -53,9 +53,12 @@ appslm::appslm(int argc, char* argv[]) {
 }
 
 void appslm::run() {
+    /* 
     // test code:
     cout << "a: " << to_string(alpha) << ", kgram: " << to_string(kgram) << ", output size: " << to_string(outputsize) << ", filename: " << filename << endl;
     return;
+    */
+
     /*
     ifstream file;
     file.open(filename);
