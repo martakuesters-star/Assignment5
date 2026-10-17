@@ -1,8 +1,17 @@
 #include <iostream>
+#include <exception>
+#include "appslm.h"
 
 using namespace std;
 
-int main(){
-    cout << "hello world" << endl;
+int main(int argc, char* argv[]){
+    try {
+        appslm app(argc, argv);
+        app.run();
+    }
+    catch (const exception& e) {
+        cerr << "appslm: " << e.what() << endl;
+        return 1;
+    }
     return 0;
 }
