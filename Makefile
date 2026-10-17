@@ -1,4 +1,4 @@
-APP = out/slm
+APP = out/aidiot
 SRCS = $(wildcard src/*.cpp)
 OBJS = $(patsubst src/%.cpp,out/%.o,$(SRCS))
 
