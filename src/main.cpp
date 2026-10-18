@@ -10,7 +10,7 @@ int main(int argc, char* argv[]){
         app.run();
     }
     catch (const exception& e) {
-        cerr << "appslm: " << e.what() << endl;
+        cerr << "slm: " << e.what() << endl;
         return 1;
     }
     return 0;

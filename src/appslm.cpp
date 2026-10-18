@@ -59,24 +59,6 @@ void appslm::run() {
     return;
     */
 
-    /*
-    ifstream file;
-    file.open(filename);
-
-    if (!file.is_open()) {
-        throw runtime_error("can not open file '" + filename + "'");
-    }
-
-    // turning the contents of the file into string
-    string text_content = "";
-    char c;
-    while (file.get(c)) {
-        text_content += c; 
-    }
-
-    file.close();
-    */
-    
     // passing the contents of the file to the model slm (train and generate text)
     slm model(kgram, alpha);
     model.train(filename);
